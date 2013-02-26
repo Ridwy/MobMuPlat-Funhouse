@@ -1,0 +1,10 @@
+#N canvas 329 522 288 136 10;
+#X obj 28 28 inlet;
+#X obj 28 71 tabplay~ \$0-sample;
+#X obj 154 70 load \$1 \$0-sample;
+#X obj 28 100 dac~;
+#X obj 28 50 select 1;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 4 0 1 0;

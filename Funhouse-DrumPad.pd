@@ -1,0 +1,5 @@
+#N canvas 0 22 448 129 10;
+#X obj 150 -13 Funhouse-DrumPad/main;
+#X text 72 44 https://github.com/Ridwy/MobMuPlat-Funhouse;
+#X text 52 29 Copyright (c) 2013 \, Chiharu Nameki All rights reserved.
+;

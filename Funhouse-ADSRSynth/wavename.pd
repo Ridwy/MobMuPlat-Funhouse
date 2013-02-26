@@ -1,0 +1,17 @@
+#N canvas 623 22 450 300 10;
+#X obj 109 61 sel 0 1 2 3;
+#X obj 109 31 inlet;
+#X obj 109 198 outlet;
+#X msg 156 152 symbol Noise;
+#X msg 140 129 symbol Square;
+#X msg 124 106 symbol Sawtooth;
+#X msg 109 84 symbol Sine;
+#X connect 0 0 6 0;
+#X connect 0 1 5 0;
+#X connect 0 2 4 0;
+#X connect 0 3 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;

@@ -1,0 +1,501 @@
+{
+	"backgroundColor": [0.23,0.3,0.3],
+	"canvasType": "iPhone3p5Inch",
+	"isOrientationLandscape": 0,
+	"isPageScrollShortEnd": 0,
+	"pageCount": 3,
+	"pdFile": "Funhouse-ADSRSynth.pd",
+	"port": 54321,
+	"startPageIndex": 2,
+	"version": 1,
+	"gui": [
+		{
+			"address": "/----------------OSC----------------",
+			"class": "MMPLabel",
+			"color": [0.75,0.75,0.32],
+			"frame": [32, 0, 288, 44],
+			"highlightColor": [0.75,0.75,0.32],
+			"text": "OSC Settings",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 26
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.17,0.17,0.17],
+			"frame": [160, 434, 160, 46],
+			"highlightColor": [0.17,0.17,0.17],
+			"text": "EG Settings >>",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.5,0.5,0.8],
+			"frame": [58, 194, 100, 24],
+			"highlightColor": [0.5,0.5,1],
+			"text": "OSC1",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 14
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.8,0.5,0.5],
+			"frame": [208, 194, 100, 24],
+			"highlightColor": [1,0.5,0.5],
+			"text": "OSC2",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 14
+		},
+		{
+			"address": "/osc1Label",
+			"class": "MMPLabel",
+			"color": [0.5,0.5,0.8],
+			"frame": [30, 58, 120, 40],
+			"highlightColor": [0.5,0.5,1],
+			"text": "Sine",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 24
+		},
+		{
+			"address": "/osc2Label",
+			"class": "MMPLabel",
+			"color": [0.8,0.5,0.5],
+			"frame": [180, 58, 120, 40],
+			"highlightColor": [1,0.5,0.5],
+			"text": "Sine",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 24
+		},
+		{
+			"address": "/osc1",
+			"class": "MMPKnob",
+			"color": [0.5,0.5,0.8],
+			"frame": [30, 94, 110, 110],
+			"highlightColor": [0.5,0.5,1],
+			"range": 4
+		},
+		{
+			"address": "/osc2",
+			"class": "MMPKnob",
+			"color": [0.8,0.5,0.5],
+			"frame": [180, 94, 110, 110],
+			"highlightColor": [1,0.5,0.5],
+			"range": 4
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 224, 276, 24],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "Mix",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 14
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 288, 276, 24],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "OSC2 Pitch Shift",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 14
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 352, 276, 24],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "Level",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 14
+		},
+		{
+			"address": "/mix",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 248, 276, 44],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 1,
+			"range": 2
+		},
+		{
+			"address": "/osc2diff",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 312, 276, 44],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 1,
+			"range": 2
+		},
+		{
+			"address": "/level",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [22, 376, 276, 44],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 1,
+			"range": 2
+		},
+		{
+			"address": "/reset",
+			"class": "MMPButton",
+			"color": [0.7,0.45,0.75],
+			"frame": [8, 432, 100, 40],
+			"highlightColor": [0.85,0.45,0.9]
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.35,0.3,0.35],
+			"frame": [18, 432, 80, 40],
+			"highlightColor": [0.35,0.3,0.35],
+			"text": "RESET",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/C04",
+			"class": "MMPButton",
+			"color": [0.7,0.45,0.75],
+			"frame": [212, 8, 100, 40],
+			"highlightColor": [0.85,0.45,0.9]
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.35,0.3,0.35],
+			"frame": [228, 8, 70, 40],
+			"highlightColor": [0.35,0.3,0.35],
+			"text": "TEST",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/----------------EG----------------",
+			"class": "MMPLabel",
+			"color": [0.75,0.75,0.32],
+			"frame": [320, 0, 320, 44],
+			"highlightColor": [0.75,0.75,0.32],
+			"text": "EG Settings",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 26
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.17,0.17,0.17],
+			"frame": [320, 434, 185, 46],
+			"highlightColor": [0.17,0.17,0.17],
+			"text": "<< OSC Settings",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.17,0.17,0.17],
+			"frame": [505, 434, 135, 46],
+			"highlightColor": [0.17,0.17,0.17],
+			"text": "Keyboard >>",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/attackLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [354, 360, 50, 50],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "A",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/decayLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [428, 360, 50, 50],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "D",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/sustainLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [502, 360, 50, 50],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "S",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/releaseLabel",
+			"class": "MMPLabel",
+			"color": [0.7,0.45,0.75],
+			"frame": [576, 360, 50, 50],
+			"highlightColor": [0.85,0.45,0.9],
+			"text": "R",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/attack",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [344, 120, 50, 240],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 0,
+			"range": 2
+		},
+		{
+			"address": "/decay",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [418, 120, 50, 240],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 0,
+			"range": 2
+		},
+		{
+			"address": "/sustain",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [492, 120, 50, 240],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 0,
+			"range": 2
+		},
+		{
+			"address": "/release",
+			"class": "MMPSlider",
+			"color": [0.7,0.45,0.75],
+			"frame": [566, 120, 50, 240],
+			"highlightColor": [0.85,0.45,0.9],
+			"isHorizontal": 0,
+			"range": 2
+		},
+		{
+			"address": "/C04",
+			"class": "MMPButton",
+			"color": [0.7,0.45,0.75],
+			"frame": [532, 8, 100, 40],
+			"highlightColor": [0.85,0.45,0.9]
+		},
+		{
+			"address": "/myLabel",
+			"class": "MMPLabel",
+			"color": [0.35,0.3,0.35],
+			"frame": [548, 8, 70, 40],
+			"highlightColor": [0.35,0.3,0.35],
+			"text": "TEST",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/-------------Keyboard-------------",
+			"class": "MMPLabel",
+			"color": [0.17,0.17,0.17],
+			"frame": [640, 434, 320, 46],
+			"highlightColor": [0.17,0.17,0.17],
+			"text": "<< Sound Settings",
+			"textFont": "",
+			"textFontFamily": "Default",
+			"textSize": 20
+		},
+		{
+			"address": "/B03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 1, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/A03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 63, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/G03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 125, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/F03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 187, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/E03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 249, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/D03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 311, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/C03",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [800, 373, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/B04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 1, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/A04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 63, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/G04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 125, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/F04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 187, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/E04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 249, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/D04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 311, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/C04",
+			"class": "MMPButton",
+			"color": [0.5,0.7,0.7],
+			"frame": [640, 373, 158, 60],
+			"highlightColor": [0.5,0.8,0.8]
+		},
+		{
+			"address": "/A#03",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [800, 32, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/G#03",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [800, 94, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/F#03",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [800, 156, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/D#03",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [800, 280, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/C#03",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [800, 342, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/A#04",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [640, 32, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/G#04",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [640, 94, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/F#04",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [640, 156, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/D#04",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [640, 280, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		},
+		{
+			"address": "/C#04",
+			"class": "MMPButton",
+			"color": [0.3,0.4,0.4],
+			"frame": [640, 342, 90, 60],
+			"highlightColor": [0.3,0.5,0.5]
+		}
+	]
+}

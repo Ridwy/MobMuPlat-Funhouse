@@ -1,0 +1,17 @@
+#N canvas 118 76 450 300 10;
+#X obj 4 25 receive fromGUI;
+#X obj 4 52 route list;
+#X obj 4 78 route \$1;
+#X obj 4 140 pack f f;
+#X obj 86 78 \$2;
+#X obj 86 54 loadbang;
+#X obj 4 110 swap;
+#X obj 4 162 s noteOnOff;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 6 1;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 6 1 3 1;

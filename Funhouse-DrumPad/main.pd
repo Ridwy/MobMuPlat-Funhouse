@@ -1,0 +1,27 @@
+#N canvas 32 102 457 218 10;
+#X obj 31 -83 receive fromGUI;
+#X obj 28 -58 route list;
+#X obj 25 -27 route /button00 /button10 /button20 /button01 /button11
+/button21 /button02 /button12 /button22 /loopToggle;
+#X obj 21 29 oneshot hat.wav;
+#X obj 304 85 oneshot kick.wav;
+#X obj 21 58 oneshot perc-2.wav;
+#X obj 291 28 oneshot ride.wav;
+#X obj 20 84 oneshot sidestick-2.wav;
+#X obj 140 57 oneshot snare-rimshot.wav;
+#X obj 303 57 oneshot snare.wav;
+#X obj 181 83 oneshot tom.wav;
+#X obj 128 29 oneshot hat-open-3.wav;
+#X obj 347 7 loop loop.aif;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 11 0;
+#X connect 2 2 6 0;
+#X connect 2 3 5 0;
+#X connect 2 4 8 0;
+#X connect 2 5 9 0;
+#X connect 2 6 7 0;
+#X connect 2 7 10 0;
+#X connect 2 8 4 0;
+#X connect 2 9 12 0;
