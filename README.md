@@ -13,7 +13,7 @@ Funhouse-DrumPad uses the sound pack from freesound:
 Studio Drums 1 by TicTacShutUp ( http://www.freesound.org/people/TicTacShutUp/packs/17/ )
 
 ### Funhouse-ADSRSynth
-Polyphonic analogue-like synthesizer
+Polyphonic analog-like synthesizer
 
 ![MobMuPlat Funhouse-ADSRSynth OSC](https://dl.dropbox.com/u/9304465/github/MobMuPlat-Funhouse/ADSRSynth0.PNG "ADSR Synth OSC")
 ![MobMuPlat Funhouse-ADSRSynth EG](https://dl.dropbox.com/u/9304465/github/MobMuPlat-Funhouse/ADSRSynth1.PNG "ADSR Synth EG")
